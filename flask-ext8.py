@@ -82,7 +82,7 @@ def index():
 # 这时候，我们可以用”@fresh_login_required”装饰器来修饰该视图。这样，通过Remember Me自动登录的用户，将无法访问该视图：
 @fresh_login_required
 def home():
-    # current_user是你在@login_manager.user_loader 里面生成了User类实例 它是全局变量 所以这个你可以使用它的方法
+    # current_user 是系统自带的 它是一个全局变量
     # get_id 方法是你直接继承来的
     return 'Logged in as: %s' % current_user.get_id()
 
